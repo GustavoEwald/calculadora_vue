@@ -19,18 +19,25 @@ const props = defineProps(['primeiroValor', 'segundoValor', 'opSelecionada'])
 <style scoped>
     .container{
         display: flex;
+        max-width: 400px;
+        gap:5px;
+        @media (max-width: 576px){
+            flex-direction: column;
+            gap:15px;
+        }
     }
 
     .numero {
         border: none;
         border-bottom: 4px solid black;
         background-color: transparent;
-        width: 150px;
-        height: 40px;
+        max-width: 100px;
+        max-height: 40px;
         text-align: center;
         color: #fff;
         font-size: 24px;
-        padding: 15px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .numero:focus {
@@ -44,9 +51,9 @@ const props = defineProps(['primeiroValor', 'segundoValor', 'opSelecionada'])
     .operacao {
         border: none;
         background-color: transparent;
-        width: 160px;
+        max-width: 160px;
         height: 40px;
-        font-size: 30px;
+        font-size: 20px;
         appearance: none;
         color: gold;
     }
@@ -56,7 +63,7 @@ const props = defineProps(['primeiroValor', 'segundoValor', 'opSelecionada'])
     }
 
     .operacao option {
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
         background-color: black;
         color: gold

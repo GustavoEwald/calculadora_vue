@@ -17,15 +17,7 @@ import Cabecalho from './components/Cabecalho.vue';
 </script>
 
 
-<template>
-  <!-- <h3>{{ operacao }}</h3>
-  <h2>{{ num1 }}</h2>
-  <h2>{{ num2 }}</h2>
-  <h3>{{ soma() }}</h3>
-  <h3>{{ dif() }}</h3>
-  <h3>{{ div() }}</h3>
-  <h3>{{ mult() }}</h3> -->
-  
+<template>  
   <div class="calculadora">
     <Cabecalho :selecionado="operacao" :primeiro-valor="num1" :segundo-valor="num2"></Cabecalho>
     <Display :op-selecionado="operacao" :soma="soma()" :dif="dif()" :div="div()" :mult="mult()" ></Display>
@@ -43,7 +35,7 @@ import Cabecalho from './components/Cabecalho.vue';
 
   .calculadora{
     background-image: linear-gradient(rgb(88, 88, 119), rgb(88, 42, 88));
-    width: 600px;
+    max-width: 600px;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -53,7 +45,7 @@ import Cabecalho from './components/Cabecalho.vue';
   }
 
   .container{
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     align-items:center;
     width: 500px;

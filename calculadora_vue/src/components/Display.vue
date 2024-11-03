@@ -14,19 +14,33 @@ const props = defineProps(['opSelecionado', 'soma', 'dif', 'div', 'mult'])
 
 <style scoped>
 .display {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 500px;
     height: 100px;
+    margin: 15px auto 50px auto;
     background-color: transparent;
     border: 2px solid white;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 576px){
+        width: 250px;
+        margin-bottom: 10px;
+    }
 }
 
 .display span {
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+
+    @media (max-width: 576px){
+        font-size: 24px;
+    }
 }
 </style>
